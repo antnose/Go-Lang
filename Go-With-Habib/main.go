@@ -32,23 +32,42 @@
 // or => ||
 // not => !
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	age := 10
+// 	gender := "female"
+
+// 	if age >= 18 && gender == "male" {
+// 		fmt.Println("You are responsible for everything!")
+// 	} else {
+// 		fmt.Println("Nothing!..")
+// 	}
+
+// 	if age >= 18 || gender == "female" {
+// 		fmt.Println("You are good to gooooo!")
+// 	} else {
+// 		fmt.Println("We are so sorry! We can't do anything!")
+// 	}
+// }
+
 package main
 
 import "fmt"
 
 func main() {
-	age := 10
-	gender := "female"
+	a := 30
 
-	if age >= 18 && gender == "male" {
-		fmt.Println("You are responsible for everything!")
-	} else {
-		fmt.Println("Nothing!..")
-	}
-
-	if age >= 18 || gender == "female" {
-		fmt.Println("You are good to gooooo!")
-	} else {
-		fmt.Println("We are so sorry! We can't do anything!")
+	switch a {
+	case 1:
+		fmt.Println("a is 1")
+	case 2:
+		fmt.Println("a is 2")
+	case 3:
+		fmt.Println("A is 3")
+	default:
+		fmt.Println("It's out of range!")
 	}
 }
