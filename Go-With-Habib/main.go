@@ -53,21 +53,37 @@
 // 	}
 // }
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	a := 30
+
+// 	switch a {
+// 	case 1:
+// 		fmt.Println("a is 1")
+// 	case 2:
+// 		fmt.Println("a is 2")
+// 	case 3:
+// 		fmt.Println("A is 3")
+// 	default:
+// 		fmt.Println("It's out of range!")
+// 	}
+// }
+
+// -------------> Function <-------------//
+
 package main
 
 import "fmt"
 
 func main() {
-	a := 30
+	a := 10
+	b := 20
 
-	switch a {
-	case 1:
-		fmt.Println("a is 1")
-	case 2:
-		fmt.Println("a is 2")
-	case 3:
-		fmt.Println("A is 3")
-	default:
-		fmt.Println("It's out of range!")
-	}
+	sum := a + b
+	fmt.Println(sum)
 }
+
+// [Golang] 010 - Introduction to Functions 3.36
