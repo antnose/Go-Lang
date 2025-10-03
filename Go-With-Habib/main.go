@@ -13,17 +13,42 @@
 // }
 
 // If-else and switch
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	age := 15
+// 	if age > 18 {
+// 		fmt.Println("You are eligible for married ")
+// 	} else if age < 18 {
+// 		fmt.Println("You are not eligible to be married, but you can love someone")
+// 	} else {
+// 		fmt.Println("You are just a teenager, not eligible for married")
+// 	}
+// }
+
+// and => &&
+// or => ||
+// not => !
+
 package main
 
 import "fmt"
 
 func main() {
-	age := 15
-	if age > 18 {
-		fmt.Println("You are eligible for married ")
-	} else if age < 18 {
-		fmt.Println("You are not eligible to be married, but you can love someone")
+	age := 10
+	gender := "female"
+
+	if age >= 18 && gender == "male" {
+		fmt.Println("You are responsible for everything!")
 	} else {
-		fmt.Println("You are just a teenager, not eligible for married")
+		fmt.Println("Nothing!..")
+	}
+
+	if age >= 18 || gender == "female" {
+		fmt.Println("You are good to gooooo!")
+	} else {
+		fmt.Println("We are so sorry! We can't do anything!")
 	}
 }
