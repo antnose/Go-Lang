@@ -36,4 +36,6 @@ func main() {
 	// 2d array
 	arrTwoD := [2][2]int{{1, 2}, {3, 4}}
 	fmt.Println(arrTwoD)
+
+	// Array use when it is fixed.
 }
