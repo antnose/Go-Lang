@@ -86,17 +86,75 @@
 // 	fmt.Println(sum)
 // }
 
+// package main
+
+// import "fmt"
+
+// func add(num1 int, num2 int) {
+// 	sum := num1 + num2
+// 	fmt.Println(sum)
+// }
+
+// func main() {
+// 	add(12, 44)
+
+// 	add(5, 8)
+// }
+
+// package main
+
+// import "fmt"
+
+// func printSomething() {
+// 	fmt.Println(("Education must be free"))
+// }
+
+// func sayHello(name string) {
+// 	fmt.Println("Welcome to the go lang course", name)
+// }
+
+// func main() {
+// 	printSomething()
+// 	sayHello("Habib vai")
+// }
+
+// -----------------> [Golang] 013 - Why Functions Are Needed <----------------- //
+
 package main
 
 import "fmt"
 
-func add(num1 int, num2 int) {
-	sum := num1 + num2
-	fmt.Println(sum)
+func printWelcomeMessage() {
+	fmt.Println("Welcome to the application")
+}
+
+func getUserName() string {
+	var name string
+	fmt.Print("Enter your name : ")
+	fmt.Scan(&name)
+	return name
+}
+
+func getTwoNumber() int {
+	var num1 int
+	var num2 int
+	fmt.Print("Enter your first number : ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Enter your second number : ")
+	fmt.Scan(&num2)
+
+	return (num1 + num2)
+}
+
+func showUserMessage(name string, sum int) {
+	fmt.Printf("Welcome %s your sum is %d", name, sum)
 }
 
 func main() {
-	add(12, 44)
+	printWelcomeMessage()
+	name := getUserName()
+	sum := getTwoNumber()
 
-	add(5, 8)
+	showUserMessage(name, sum)
 }
