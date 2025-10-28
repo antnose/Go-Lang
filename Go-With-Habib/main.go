@@ -120,41 +120,69 @@
 
 // -----------------> [Golang] 013 - Why Functions Are Needed <----------------- //
 
+// package main
+
+// import "fmt"
+
+// func printWelcomeMessage() {
+// 	fmt.Println("Welcome to the application")
+// }
+
+// func getUserName() string {
+// 	var name string
+// 	fmt.Print("Enter your name : ")
+// 	fmt.Scan(&name)
+// 	return name
+// }
+
+// func getTwoNumber() int {
+// 	var num1 int
+// 	var num2 int
+// 	fmt.Print("Enter your first number : ")
+// 	fmt.Scan(&num1)
+
+// 	fmt.Print("Enter your second number : ")
+// 	fmt.Scan(&num2)
+
+// 	return (num1 + num2)
+// }
+
+// func showUserMessage(name string, sum int) {
+// 	fmt.Printf("Welcome %s your sum is %d", name, sum)
+// }
+
+// func main() {
+// 	printWelcomeMessage()
+// 	name := getUserName()
+// 	sum := getTwoNumber()
+
+// 	showUserMessage(name, sum)
+// }
+
+// -----------------> [Golang] 014 - What Is Scope <----------------- //
 package main
 
 import "fmt"
 
-func printWelcomeMessage() {
-	fmt.Println("Welcome to the application")
-}
+var (
+	a = 20
+	b = 30
+)
 
-func getUserName() string {
-	var name string
-	fmt.Print("Enter your name : ")
-	fmt.Scan(&name)
-	return name
-}
-
-func getTwoNumber() int {
-	var num1 int
-	var num2 int
-	fmt.Print("Enter your first number : ")
-	fmt.Scan(&num1)
-
-	fmt.Print("Enter your second number : ")
-	fmt.Scan(&num2)
-
-	return (num1 + num2)
-}
-
-func showUserMessage(name string, sum int) {
-	fmt.Printf("Welcome %s your sum is %d", name, sum)
+func add(x int, y int) {
+	fmt.Println(x + y)
 }
 
 func main() {
-	printWelcomeMessage()
-	name := getUserName()
-	sum := getTwoNumber()
+	var p = 30
+	var q = 40
 
-	showUserMessage(name, sum)
+	add(p, q)
+	add(a, b)
+	add(q, a)
 }
+
+// Primarily scopes are 3 types:
+// 1. Block Scope / Local Scope
+// 2. Package Scope / File Scope
+// 3. Global Scope
