@@ -74,16 +74,29 @@
 
 // -------------> Function <-------------//
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	a := 10
+// 	b := 20
+
+// 	sum := a + b
+// 	fmt.Println(sum)
+// }
+
 package main
 
 import "fmt"
 
-func main() {
-	a := 10
-	b := 20
-
-	sum := a + b
+func add(num1 int, num2 int) {
+	sum := num1 + num2
 	fmt.Println(sum)
 }
 
-// [Golang] 010 - Introduction to Functions 3.36
+func main() {
+	add(12, 44)
+
+	add(5, 8)
+}
