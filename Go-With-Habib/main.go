@@ -160,29 +160,40 @@
 // }
 
 // -----------------> [Golang] 014 - What Is Scope <----------------- //
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-var (
-	a = 20
-	b = 30
-)
+// var (
+// 	a = 20
+// 	b = 30
+// )
 
-func add(x int, y int) {
-	fmt.Println(x + y)
-}
+// func add(x int, y int) {
+// 	fmt.Println(x + y)
+// }
 
-func main() {
-	var p = 30
-	var q = 40
+// func main() {
+// 	var p = 30
+// 	var q = 40
 
-	add(p, q)
-	add(a, b)
-	add(q, a)
-}
+// 	add(p, q)
+// 	add(a, b)
+// 	add(q, a)
+// }
 
 // Primarily scopes are 3 types:
 // 1. Block Scope / Local Scope
 // 2. Package Scope / File Scope
 // 3. Global Scope
+
+// -----------------> [Golang] 016 - Package Scope <----------------- //
+package main
+
+import (
+	"example.com/mathlib"
+)
+
+func main() {
+	mathlib.Add(6, 4)
+}
