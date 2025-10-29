@@ -251,17 +251,34 @@
 
 // -----------------> [Golang] 020 - Init Function <-----------------//
 
+// package main
+
+// import "fmt"
+
+// var a = 10
+
+// func main() {
+// 	fmt.Println(a)
+// }
+
+// func init() {
+// 	fmt.Println(a)
+// 	a = 20
+// }
+
+// -----------------> [Golang] 021 Anonymous Function and IIFE <-----------------//
 package main
 
 import "fmt"
 
-var a = 10
-
 func main() {
-	fmt.Println(a)
+	// anonymous function
+	// Immediately Invoked Function Expression or it's called IIFE Function
+	func(a int, b int) {
+		fmt.Println(a + b)
+	}(5, 6)
 }
 
 func init() {
-	fmt.Println(a)
-	a = 20
+	fmt.Println("I will be called first")
 }
