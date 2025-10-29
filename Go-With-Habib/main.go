@@ -223,6 +223,34 @@
 // }
 
 // ----------------->[Golang] 018 - Variable Shadowing <----------------- //
+// package main
+
+// import "fmt"
+
+// var a = 10
+
+// func main() {
+// 	age := 30
+
+// 	if age >= 18 {
+// 		a := 47
+// 		fmt.Println(a)
+// 	}
+
+// 	fmt.Println(a)
+// }
+
+// -----------------> [Golang] 019 - Function Types and Standard Function or Named Function <-----------------//
+// package main
+
+// import "fmt"
+
+// func main() {
+
+// }
+
+// -----------------> [Golang] 020 - Init Function <-----------------//
+
 package main
 
 import "fmt"
@@ -230,12 +258,10 @@ import "fmt"
 var a = 10
 
 func main() {
-	age := 30
-
-	if age >= 18 {
-		a := 47
-		fmt.Println(a)
-	}
-
 	fmt.Println(a)
+}
+
+func init() {
+	fmt.Println(a)
+	a = 20
 }
