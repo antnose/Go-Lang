@@ -188,12 +188,54 @@
 // 3. Global Scope
 
 // -----------------> [Golang] 016 - Package Scope <----------------- //
+// package main
+
+// import (
+// 	"example.com/mathlib"
+// )
+
+// func main() {
+// 	mathlib.Add(6, 4)
+// }
+
+// -----------------> [Golang] 017 - Scope With Another Boring Example <----------------- //
+// package main
+
+// import "fmt"
+
+// var (
+// 	a = 10
+// 	b = 20
+// )
+
+// func printNum(num int) {
+// 	fmt.Println(num)
+
+// }
+
+// func add(a int, b int) {
+// 	res := a + b
+// 	printNum(res)
+// }
+
+// func main() {
+// 	add(a, b)
+// }
+
+// ----------------->[Golang] 018 - Variable Shadowing <----------------- //
 package main
 
-import (
-	"example.com/mathlib"
-)
+import "fmt"
+
+var a = 10
 
 func main() {
-	mathlib.Add(6, 4)
+	age := 30
+
+	if age >= 18 {
+		a := 47
+		fmt.Println(a)
+	}
+
+	fmt.Println(a)
 }
