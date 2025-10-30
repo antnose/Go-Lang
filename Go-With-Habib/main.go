@@ -267,18 +267,84 @@
 // }
 
 // -----------------> [Golang] 021 Anonymous Function and IIFE <-----------------//
+// package main
+
+// import "fmt"
+
+// func main() {
+// anonymous function
+// Immediately Invoked Function Expression or it's called IIFE Function
+// 	func(a int, b int) {
+// 		fmt.Println(a + b)
+// 	}(5, 6)
+// }
+
+// func init() {
+// 	fmt.Println("I will be called first")
+// }
+
+// -----------------> [Golang] 022 - A Noob Function Expression Example <-----------------//
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	add := func(a int, b int) {
+// 		fmt.Println(a + b)
+// 	}
+
+// 	add(2, 3)
+// }
+
+// func init() {
+// 	fmt.Println(("I will be cal   led first"))
+// }
+
+// -----------------> [Golang] 023 - Parameter Vs Argument | First Order Function Vs Higher Order Function <-----------------//
+// package main
+
+// import "fmt"
+
+// func add(a int, b int) {
+// 	fmt.Println(a + b)
+// }
+
+// func main() {
+// 	add(4, 3)
+// }
+
+/*
+	1. Parameter vs Argument
+	2. First order function
+		i. standard function or named function
+		ii. anonymous function
+		iii. IIFE
+		iv. function expression
+	3. Higher order function
+*/
+
+// -----------> Higher order function <----------- \\
 package main
 
 import "fmt"
 
-func main() {
-	// anonymous function
-	// Immediately Invoked Function Expression or it's called IIFE Function
-	func(a int, b int) {
-		fmt.Println(a + b)
-	}(5, 6)
+/*
+	* If any function want to be higher order function then must be follow one of the rules from between
+	1. parameter -> function
+	2. function return
+	3. both
+*/
+
+func processOperation(a int, b int, op func(p int, q int)) {
+	op(a, b)
 }
 
-func init() {
-	fmt.Println("I will be called first")
+func add(x int, y int) {
+	z := x + y
+	fmt.Println(z)
+}
+
+func main() {
+	processOperation(2, 4, add)
 }
